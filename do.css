@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1e1e1e, #9d9d9d);
+  color: #eaeaea;
+}
+
+.container {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .container {
+  background-color: #1f1f1f;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #6f42c1;
+  margin-bottom: 20px;
+}
+
+body.dark h1 {
+  color: grey;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+body.dark #task-input {
+  background-color: #555;
+  color: white;
+  border-color: #bbb;
+}
+
+#task-input:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+#add-task-btn {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #6e8efb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-task-btn:hover {
+  background-color: #a777e3;
+}
+
+body.dark #add-task-btn {
+  background-color: #966231;
+}
+
+body.dark #add-task-btn:hover {
+  background-color: #ff9800;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: #a777e3;
+  border-radius: 10px;
+}
+
+li {
+  background-color: #f1f1f1;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+li.completed {
+  background-color: #d4edda;
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+body.dark li {
+  background-color: #666;
+  color: white;
+}
+
+li button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+li button:nth-child(1) {
+  background-color: #20c997;
+  color: white;
+}
+
+li button:nth-child(1):hover {
+  background-color: #186f2b;
+}
+
+li button:nth-child(2) {
+  background-color: #28a745;
+  color: white;
+}
+
+li button:nth-child(2):hover {
+  background-color: #218838;
+}
+
+li button:nth-child(3) {
+  background-color: #ffc107;
+  color: white;
+}
+
+li button:nth-child(3):hover {
+  background-color: #d39e00;
+}
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+#search-box {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+body.dark #search-box {
+  background-color: #555;
+  color: white;
+  border-color: #bbb;
+}
+
+#theme-toggle {
+  background-color: #6e8efb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #a777e3;
+}
+
+body.dark #theme-toggle {
+  background-color: #966231;
+  color: white;
+}
+
+body.dark #theme-toggle:hover {
+  background-color: #ff9800;
+}
+
+#progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #76c7c0;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
